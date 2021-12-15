@@ -1,0 +1,63 @@
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Sabrina's Sanctuary", NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Dave's Dojo", NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Tania's Temple", NOW(), NOW());
+
+SELECT * FROM dojos;
+
+SET SQL_SAFE_UPDATES = 0;
+
+DELETE FROM dojos;
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Sam's Sanctuary", NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Douglas' Dojo", NOW(), NOW());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("Tony's Temple", NOW(), NOW());
+
+SELECT * FROM dojos;
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Robert", "Kelly", 28, 4, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Lizzie", "Millz", 24, 4, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Luis", "Mendz", 25, 4, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Chineme", "Ogb", 22, 5, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Ramon", "Frank", 30, 5, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Freddy", "Benjamin", 25, 5, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Laura", "Manny", 52, 6, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Sammy", "Ingram", 60, 6, NOW(), NOW());
+
+INSERT INTO ninjas (first_name, last_name, age, dojos_id, created_at, updated_at)
+VALUES ("Dylan", "James", 70, 6, NOW(), NOW());
+
+SELECT * FROM ninjas;
+
+SELECT * FROM ninjas
+WHERE dojos_id = 6;
+
+SELECT *
+FROM ninjas
+LEFT JOIN dojos
+ON ninjas.dojos_id = dojos.id
+ORDER BY ninjas.id DESC LIMIT 1;
